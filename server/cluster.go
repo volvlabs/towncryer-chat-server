@@ -11,12 +11,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/tinode/chat/server/auth"
-	"github.com/tinode/chat/server/concurrency"
-	"github.com/tinode/chat/server/logs"
-	"github.com/tinode/chat/server/push"
-	rh "github.com/tinode/chat/server/ringhash"
-	"github.com/tinode/chat/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/auth"
+	"github.com/volvlabs/towncryer-chat-server/server/concurrency"
+	"github.com/volvlabs/towncryer-chat-server/server/logs"
+	"github.com/volvlabs/towncryer-chat-server/server/push"
+	rh "github.com/volvlabs/towncryer-chat-server/server/ringhash"
+	"github.com/volvlabs/towncryer-chat-server/server/store/types"
 )
 
 const (

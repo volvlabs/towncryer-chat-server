@@ -20,10 +20,10 @@ import (
 	"strings"
 	textt "text/template"
 
-	"github.com/tinode/chat/server/logs"
-	"github.com/tinode/chat/server/store"
-	t "github.com/tinode/chat/server/store/types"
-	"github.com/tinode/chat/server/validate"
+	"github.com/volvlabs/towncryer-chat-server/server/logs"
+	"github.com/volvlabs/towncryer-chat-server/server/store"
+	t "github.com/volvlabs/towncryer-chat-server/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/validate"
 	i18n "golang.org/x/text/language"
 )
 

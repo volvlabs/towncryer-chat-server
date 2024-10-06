@@ -5,11 +5,11 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/tinode/chat/server/auth"
-	"github.com/tinode/chat/server/logs"
-	"github.com/tinode/chat/server/push"
-	"github.com/tinode/chat/server/store"
-	"github.com/tinode/chat/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/auth"
+	"github.com/volvlabs/towncryer-chat-server/server/logs"
+	"github.com/volvlabs/towncryer-chat-server/server/push"
+	"github.com/volvlabs/towncryer-chat-server/server/store"
+	"github.com/volvlabs/towncryer-chat-server/server/store/types"
 )
 
 const (
@@ -127,6 +127,7 @@ func replyCreateUser(s *Session, msg *ClientComMessage, rec *auth.Rec) {
 	}
 
 	// Create user record in the database.
+	user.Channel = msg.Acc.Channel
 	if _, err := store.Users.Create(&user, private); err != nil {
 		logs.Warn.Println("create user: failed to create user", err, "sid=", s.sid)
 		s.queueOut(ErrUnknown(msg.Id, "", msg.Timestamp))

@@ -24,7 +24,7 @@ See [general instructions](./INSTALL.md) or [docker-specific instructions](./doc
 
 * Read [API documentation](docs/API.md) and [FAQ](docs/faq.md). Read configuration instructions contained in the [`tinode.conf`](./server/tinode.conf) file.
 * For support, general questions, discussions post to [https://groups.google.com/d/forum/tinode](https://groups.google.com/d/forum/tinode).
-* For bugs and feature requests [open an issue](https://github.com/tinode/chat/issues/new/choose).
+* For bugs and feature requests [open an issue](https://github.com/volvlabs/towncryer-chat-server/issues/new/choose).
 * Use https://tinode.co/contact for commercial inquiries.
 
 ## Helping out
@@ -32,7 +32,7 @@ See [general instructions](./INSTALL.md) or [docker-specific instructions](./doc
 * If you appreciate our work, please help spread the word! Sharing on Reddit, HN, and other communities helps more than you think.
 * Consider buying paid support: https://tinode.co/support.html
 * If you are a software developer, send us your pull requests with bug fixes and new features.
-* If you use the app and discover bugs or missing features, let us know by filing bug reports and feature requests. Vote for existing [feature requests](https://github.com/tinode/chat/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3A%22feature+request%22) you find most valuable.
+* If you use the app and discover bugs or missing features, let us know by filing bug reports and feature requests. Vote for existing [feature requests](https://github.com/volvlabs/towncryer-chat-server/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3A%22feature+request%22) you find most valuable.
 * If you speak a language other than English, [translate](docs/translations.md) the apps into your language. You may also review and improve existing translations.
 * If you are a UI/UX expert, help us polish the app UI.
 * Use it: install it for your colleagues or friends at work or at home.
@@ -105,7 +105,7 @@ When you register a new account you are asked for an email address to send valid
   * Scriptable [command-line tool](tn-cli/) for server administration.
 * Performance, reliability and development:
   * Sharded clustering with failover.
-  * Storage and out of band transfer of large objects like images or document files using local file system or Amazon S3 (other storage systems can be supported with [media handlers](https://github.com/tinode/chat/blob/master/server/media/media.go#L21)).
+  * Storage and out of band transfer of large objects like images or document files using local file system or Amazon S3 (other storage systems can be supported with [media handlers](https://github.com/volvlabs/towncryer-chat-server/blob/master/server/media/media.go#L21)).
   * JSON or [protobuf version 3](https://developers.google.com/protocol-buffers/) wire protocols.
   * Bindings for various programming languages:
     * Javascript with no external dependencies.

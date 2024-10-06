@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/tinode/chat/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/store/types"
 )
 
 // ReadSeekCloser must be implemented by the media being downloaded.

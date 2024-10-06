@@ -10,8 +10,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/tinode/chat/server/logs"
-	"github.com/tinode/chat/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/logs"
+	"github.com/volvlabs/towncryer-chat-server/server/store/types"
 )
 
 func (t *Topic) runProxy(hub *Hub) {

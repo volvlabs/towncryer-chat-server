@@ -30,7 +30,7 @@ API key v1 seq1 [ordinary]: AQAAAAABAACGOIyP2vh5avSff5oVvMpk
 HMAC salt: TC0Jzr8f28kAspXrb4UYccJUJ63b7CSA16n1qMxxGpw=
 ```
 
-Copy `HMAC salt` to `api_key_salt` parameter in your server [config file](https://github.com/tinode/chat/blob/master/server/tinode.conf).
+Copy `HMAC salt` to `api_key_salt` parameter in your server [config file](https://github.com/volvlabs/towncryer-chat-server/blob/master/server/tinode.conf).
 Copy `API key` to the client applications:
 
  * TinodeWeb: `API_KEY` in [config.js](https://github.com/tinode/webapp/blob/master/src/config.js)

@@ -4,7 +4,7 @@ The config file [`tinode.conf`](./server/tinode.conf) contains extensive instruc
 
 ## Installing from Binaries
 
-1. Visit the [Releases page](https://github.com/tinode/chat/releases/), choose the latest or otherwise the most suitable release. From the list of binaries download the one for your database and platform. Once the binary is downloaded, unpack it to a directory of your choosing, `cd` to that directory.
+1. Visit the [Releases page](https://github.com/volvlabs/towncryer-chat-server/releases/), choose the latest or otherwise the most suitable release. From the list of binaries download the one for your database and platform. Once the binary is downloaded, unpack it to a directory of your choosing, `cd` to that directory.
 
 2. Make sure your database is running. Make sure it's configured to accept connections from `localhost`. In case of MySQL, Tinode will try to connect as `root` without the password. In case of PostgreSQL, Tinode will try connect as `postgres` with the password `postgres`. See notes below (_Building from Source_, section 4) on how to configure Tinode to use a different user or a password. MySQL 5.7 or above is required. MySQL 5.6 or below **will not work**. PostgreSQL 13 or above is required. PostgreSQL 12 or below **will not work**.
 
@@ -41,43 +41,43 @@ See [instructions](./docker/README.md)
 4. Fetch, build Tinode server and tinode-db database initializer:
   - **MySQL**:
 	```
-	go install -tags mysql github.com/tinode/chat/server@latest
-	go install -tags mysql github.com/tinode/chat/tinode-db@latest
+	go install -tags mysql github.com/volvlabs/towncryer-chat-server/server@latest
+	go install -tags mysql github.com/volvlabs/towncryer-chat-server/tinode-db@latest
 	```
   - **PostgreSQL**:
 	```
-	go install -tags postgres github.com/tinode/chat/server@latest
-	go install -tags postgres github.com/tinode/chat/tinode-db@latest
+	go install -tags postgres github.com/volvlabs/towncryer-chat-server/server@latest
+	go install -tags postgres github.com/volvlabs/towncryer-chat-server/tinode-db@latest
 	```
   - **MongoDB**:
 	```
-	go install -tags mongodb github.com/tinode/chat/server@latest
-	go install -tags mongodb github.com/tinode/chat/tinode-db@latest
+	go install -tags mongodb github.com/volvlabs/towncryer-chat-server/server@latest
+	go install -tags mongodb github.com/volvlabs/towncryer-chat-server/tinode-db@latest
 	```
   - **RethinkDb**:
 	```
-	go install -tags rethinkdb github.com/tinode/chat/server@latest
-	go install -tags rethinkdb github.com/tinode/chat/tinode-db@latest
+	go install -tags rethinkdb github.com/volvlabs/towncryer-chat-server/server@latest
+	go install -tags rethinkdb github.com/volvlabs/towncryer-chat-server/tinode-db@latest
 	```
   - **All** (bundle all of the above DB adapters):
 	```
-	go install -tags "mysql rethinkdb mongodb postgres" github.com/tinode/chat/server@latest
-	go install -tags "mysql rethinkdb mongodb postgres" github.com/tinode/chat/tinode-db@latest
+	go install -tags "mysql rethinkdb mongodb postgres" github.com/volvlabs/towncryer-chat-server/server@latest
+	go install -tags "mysql rethinkdb mongodb postgres" github.com/volvlabs/towncryer-chat-server/tinode-db@latest
 	```
 
-    The steps above install Tinode binaries at `$GOPATH/bin/`, sorces and supporting files are located at `$GOPATH/pkg/mod/github.com/tinode/chat@vX.XX.X/` where `X.XX.X` is the version you installed, such as `0.19.1`.
+    The steps above install Tinode binaries at `$GOPATH/bin/`, sorces and supporting files are located at `$GOPATH/pkg/mod/github.com/volvlabs/towncryer-chat-server@vX.XX.X/` where `X.XX.X` is the version you installed, such as `0.19.1`.
 
     Note the required **`-tags rethinkdb`**, **`-tags mysql`**, **`-tags mongodb`** or **`-tags postgres`** build option.
 
     You may also optionally define `main.buildstamp` for the server by adding a build option, for instance, with a timestamp:
     ```
-    go install -tags mysql -ldflags "-X main.buildstamp=`date -u '+%Y%m%dT%H:%M:%SZ'`" github.com/tinode/chat/server@latest
+    go install -tags mysql -ldflags "-X main.buildstamp=`date -u '+%Y%m%dT%H:%M:%SZ'`" github.com/volvlabs/towncryer-chat-server/server@latest
     ```
     The value of `buildstamp` will be sent by the server to the clients.
 
     Building with Go 1.17 or below **will fail**!
 
-5. Open `tinode.conf` (located at `$GOPATH/pkg/mod/github.com/tinode/chat@vX.XX.X/server/`). Check that the database connection parameters are correct for your database. If you are using MySQL make sure [DSN](https://github.com/go-sql-driver/mysql#dsn-data-source-name) in `"mysql"` section is appropriate for your MySQL installation. Option `parseTime=true` is required.
+5. Open `tinode.conf` (located at `$GOPATH/pkg/mod/github.com/volvlabs/towncryer-chat-server@vX.XX.X/server/`). Check that the database connection parameters are correct for your database. If you are using MySQL make sure [DSN](https://github.com/go-sql-driver/mysql#dsn-data-source-name) in `"mysql"` section is appropriate for your MySQL installation. Option `parseTime=true` is required.
 ```js
 	"mysql": {
 		"dsn": "root@tcp(localhost)/tinode?parseTime=true",
@@ -99,11 +99,11 @@ See [instructions](./docker/README.md)
 
 ## Running a Standalone Server
 
-If you followed instructions in the previous section then the Tinode binaries are installed in `$GOPATH/bin/`, the sources and supporting files are located in `$GOPATH/pkg/mod/github.com/tinode/chat@vX.XX.X/`, where `X.XX.X` is the version you installed, for example `0.19.1`.
+If you followed instructions in the previous section then the Tinode binaries are installed in `$GOPATH/bin/`, the sources and supporting files are located in `$GOPATH/pkg/mod/github.com/volvlabs/towncryer-chat-server@vX.XX.X/`, where `X.XX.X` is the version you installed, for example `0.19.1`.
 
 Switch to sources directory (replace `X.XX.X` with your actual version, such as `0.19.1`):
 ```
-cd $GOPATH/pkg/mod/github.com/tinode/chat@vX.XX.X
+cd $GOPATH/pkg/mod/github.com/volvlabs/towncryer-chat-server@vX.XX.X
 ```
 
 1. Make sure your database is running:
@@ -224,4 +224,4 @@ exit
 
 Otherwise `SIGHUP` may be received by the server if the shell connection is broken before the ssh session has terminated (indicated by `Connection to XXX.XXX.XXX.XXX port 22: Broken pipe`). In such a case the server will shutdown because `SIGHUP` is intercepted by the server and interpreted as a shutdown request.
 
-For more details see https://github.com/tinode/chat/issues/25.
+For more details see https://github.com/volvlabs/towncryer-chat-server/issues/25.

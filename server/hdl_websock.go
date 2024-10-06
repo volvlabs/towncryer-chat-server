@@ -15,7 +15,7 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/tinode/chat/server/logs"
+	"github.com/volvlabs/towncryer-chat-server/server/logs"
 )
 
 const (

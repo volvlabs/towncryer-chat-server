@@ -11,12 +11,12 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/tinode/chat/server/logs"
-	"github.com/tinode/chat/server/push"
-	"github.com/tinode/chat/server/push/common"
-	"github.com/tinode/chat/server/push/fcm"
-	"github.com/tinode/chat/server/store"
-	"github.com/tinode/chat/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/logs"
+	"github.com/volvlabs/towncryer-chat-server/server/push"
+	"github.com/volvlabs/towncryer-chat-server/server/push/common"
+	"github.com/volvlabs/towncryer-chat-server/server/push/fcm"
+	"github.com/volvlabs/towncryer-chat-server/server/store"
+	"github.com/volvlabs/towncryer-chat-server/server/store/types"
 
 	fcmv1 "google.golang.org/api/fcm/v1"
 )

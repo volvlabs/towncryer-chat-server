@@ -14,7 +14,7 @@ import (
 	"crypto/md5"
 	"encoding/base64"
 
-	"github.com/tinode/chat/server/logs"
+	"github.com/volvlabs/towncryer-chat-server/server/logs"
 )
 
 // Singned AppID. Composition:

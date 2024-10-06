@@ -14,9 +14,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/tinode/chat/server/logs"
-	"github.com/tinode/chat/server/store/types"
 	jcr "github.com/tinode/jsonco"
+	"github.com/volvlabs/towncryer-chat-server/server/logs"
+	"github.com/volvlabs/towncryer-chat-server/server/store/types"
 )
 
 // Video call constants.
