@@ -7,11 +7,11 @@ import (
 	"time"
 
 	"github.com/golang/mock/gomock"
-	"github.com/tinode/chat/server/auth"
-	"github.com/tinode/chat/server/auth/mock_auth"
-	"github.com/tinode/chat/server/store"
-	"github.com/tinode/chat/server/store/mock_store"
-	"github.com/tinode/chat/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/auth"
+	"github.com/volvlabs/towncryer-chat-server/server/auth/mock_auth"
+	"github.com/volvlabs/towncryer-chat-server/server/store"
+	"github.com/volvlabs/towncryer-chat-server/server/store/mock_store"
+	"github.com/volvlabs/towncryer-chat-server/server/store/types"
 )
 
 func test_makeSession(uid types.Uid) *Session {

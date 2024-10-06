@@ -13,14 +13,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tinode/chat/server/auth"
-	_ "github.com/tinode/chat/server/db/mongodb"
-	_ "github.com/tinode/chat/server/db/mysql"
-	_ "github.com/tinode/chat/server/db/postgres"
-	_ "github.com/tinode/chat/server/db/rethinkdb"
-	"github.com/tinode/chat/server/store"
-	"github.com/tinode/chat/server/store/types"
 	jcr "github.com/tinode/jsonco"
+	"github.com/volvlabs/towncryer-chat-server/server/auth"
+	_ "github.com/volvlabs/towncryer-chat-server/server/db/mongodb"
+	_ "github.com/volvlabs/towncryer-chat-server/server/db/mysql"
+	_ "github.com/volvlabs/towncryer-chat-server/server/db/postgres"
+	_ "github.com/volvlabs/towncryer-chat-server/server/db/rethinkdb"
+	"github.com/volvlabs/towncryer-chat-server/server/store"
+	"github.com/volvlabs/towncryer-chat-server/server/store/types"
 )
 
 type configType struct {

@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tinode/chat/server/auth"
-	"github.com/tinode/chat/server/db/common"
-	"github.com/tinode/chat/server/store"
-	t "github.com/tinode/chat/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/auth"
+	"github.com/volvlabs/towncryer-chat-server/server/db/common"
+	"github.com/volvlabs/towncryer-chat-server/server/store"
+	t "github.com/volvlabs/towncryer-chat-server/server/store/types"
 	b "go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	mdb "go.mongodb.org/mongo-driver/mongo"
@@ -55,9 +55,9 @@ const (
 // See https://godoc.org/go.mongodb.org/mongo-driver/mongo/options#ClientOptions for explanations.
 type configType struct {
 	// Connection string URI https://www.mongodb.com/docs/manual/reference/connection-string/
-	Uri            string      `json:"uri,omitempty"`
-	Addresses      any `json:"addresses,omitempty"`
-	ConnectTimeout int         `json:"timeout,omitempty"`
+	Uri            string `json:"uri,omitempty"`
+	Addresses      any    `json:"addresses,omitempty"`
+	ConnectTimeout int    `json:"timeout,omitempty"`
 
 	// Options separately from ClientOptions (custom options):
 	Database   string `json:"database,omitempty"`

@@ -155,7 +155,7 @@ COPY config.template .
 COPY entrypoint.sh .
 
 # Get the desired Tinode build.
-ADD https://github.com/tinode/chat/releases/download/v$BINVERS/tinode-$TARGET_DB.linux-amd64.tar.gz .
+ADD https://github.com/volvlabs/towncryer-chat-server/releases/download/v$BINVERS/tinode-$TARGET_DB.linux-amd64.tar.gz .
 
 # Unpack the Tinode archive.
 RUN tar -xzf tinode-$TARGET_DB.linux-amd64.tar.gz \

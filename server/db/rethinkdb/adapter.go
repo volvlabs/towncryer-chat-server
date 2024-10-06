@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tinode/chat/server/auth"
-	"github.com/tinode/chat/server/db/common"
-	"github.com/tinode/chat/server/store"
-	t "github.com/tinode/chat/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/auth"
+	"github.com/volvlabs/towncryer-chat-server/server/db/common"
+	"github.com/volvlabs/towncryer-chat-server/server/store"
+	t "github.com/volvlabs/towncryer-chat-server/server/store/types"
 	rdb "gopkg.in/rethinkdb/rethinkdb-go.v6"
 )
 

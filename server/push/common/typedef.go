@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/tinode/chat/server/push"
+	"github.com/volvlabs/towncryer-chat-server/server/push"
 	"google.golang.org/api/googleapi"
 )
 

@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"text/template"
 
-	t "github.com/tinode/chat/server/store/types"
+	t "github.com/volvlabs/towncryer-chat-server/server/store/types"
 )
 
 // Validator handles validation of user's credentials, like email or phone.

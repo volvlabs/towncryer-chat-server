@@ -10,8 +10,8 @@ package main
 import (
 	"time"
 
-	"github.com/tinode/chat/server/push"
-	"github.com/tinode/chat/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/push"
+	"github.com/volvlabs/towncryer-chat-server/server/store/types"
 )
 
 // Subscribe or unsubscribe user to/from FCM topic (channel).

@@ -15,7 +15,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tinode/chat/server/store/types"
+	"github.com/volvlabs/towncryer-chat-server/server/store/types"
 )
 
 // MsgGetOpts defines Get query parameters.

@@ -10,11 +10,11 @@ import (
 	time "time"
 
 	gomock "github.com/golang/mock/gomock"
-	auth "github.com/tinode/chat/server/auth"
-	adapter "github.com/tinode/chat/server/db"
-	media "github.com/tinode/chat/server/media"
-	types "github.com/tinode/chat/server/store/types"
-	validate "github.com/tinode/chat/server/validate"
+	auth "github.com/volvlabs/towncryer-chat-server/server/auth"
+	adapter "github.com/volvlabs/towncryer-chat-server/server/db"
+	media "github.com/volvlabs/towncryer-chat-server/server/media"
+	types "github.com/volvlabs/towncryer-chat-server/server/store/types"
+	validate "github.com/volvlabs/towncryer-chat-server/server/validate"
 )
 
 // MockPersistentStorageInterface is a mock of PersistentStorageInterface interface.

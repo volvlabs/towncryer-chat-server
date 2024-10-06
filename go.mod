@@ -1,4 +1,4 @@
-module github.com/tinode/chat
+module github.com/volvlabs/towncryer-chat-server
 
 go 1.19
 
